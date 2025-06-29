@@ -3,7 +3,8 @@ using UnityEngine;
 namespace Mirage.Examples.Additive
 {
     [RequireComponent(typeof(CharacterController))]
-    [RequireComponent(typeof(NetworkTransform))]
+    //[RequireComponent(typeof(NetworkTransform))]
+    [RequireComponent(typeof(JamesFrowen.PositionSync.SyncPositionBehaviour))]
     [RequireComponent(typeof(CapsuleCollider))]
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerController : NetworkBehaviour

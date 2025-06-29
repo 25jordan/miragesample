@@ -11,10 +11,21 @@ namespace Mirage.Examples.Additive
         public Quaternion rotation;
         private NetworkAnimator networkAnimator;
 
-        [Server(error = false)]
+        //[Server]
         private void Start()
         {
+            Identity.OnStartServer.AddListener(MyOnStartServer);
+            //networkAnimator = GetComponent<NetworkAnimator>();
+        }
+
+        private void MyOnStartServer()
+        {
             networkAnimator = GetComponent<NetworkAnimator>();
+        }
+
+        private void OnDestroy()
+        {
+            Identity.OnStartServer.RemoveListener(MyOnStartServer);
         }
 
         [Range(0, 1)]

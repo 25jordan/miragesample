@@ -418,7 +418,7 @@ MonoBehaviour:
     To: 3
     Timing: 0
     Interval: 0.1
-  subScene: 
+  subScene: Assets/Samples/Mirage/151.3.2/AdditiveScenes/Scenes/SubScene.unity
 --- !u!1001 &160176455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -474,6 +474,10 @@ PrefabInstance:
     - target: {fileID: 160176457, guid: ab222ed73ada1ac4ba2f61e843d7627c, type: 3}
       propertyPath: m_Name
       value: reconTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 160176457, guid: ab222ed73ada1ac4ba2f61e843d7627c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 160176458, guid: ab222ed73ada1ac4ba2f61e843d7627c, type: 3}
       propertyPath: m_Enabled
@@ -1990,6 +1994,7 @@ GameObject:
   - component: {fileID: 1661834281}
   - component: {fileID: 1661834286}
   - component: {fileID: 1661834285}
+  - component: {fileID: 1661834287}
   m_Layer: 0
   m_Name: Network
   m_TagString: Untagged
@@ -2223,6 +2228,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b750203ddb2d9f84abd799a5c2c32cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1661834287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661834277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39d7f8e1b55ad64493bf95650278d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Client: {fileID: 1661834282}
+  Server: {fileID: 1661834283}
+  PackSettings:
+    IncludeComponentIndex: 0
+    timePrecision: 0.0001
+    blockSize: 5
+    precision: {x: 0.0033333334, y: 0.0033333334, z: 0.0033333334}
+    bitCount: 10
+  MessageChannel: 0
+  SyncRate: 20
+  TickDelayCount: 2
+  TimeScaleModifier: 0.01
+  syncMode: 1
 --- !u!1 &1727677796
 GameObject:
   m_ObjectHideFlags: 0
